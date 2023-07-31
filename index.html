@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Обнулення стилів.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://booking.uz.gov.ua/i/img/favicon-new.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/4b0e37739b.js" crossorigin="anonymous"></script>
+    <title>Замовлення квитків</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="popular">
+            <div class="container">
+                <p class="popular__text text">Подорожуй популярними напрямками</p>
+                <ul class="popular__list">
+                    <li class="popular__list-item">
+                        <button id="popular1">
+                            Київ
+                            <i class="fa-sharp fa-solid fa-arrows-left-right" style="color: #000000;"></i>
+                            Львів
+                        </button>
+                    </li>
+                    <li class="popular__list-item">
+                        <button id="popular2">
+                            Київ
+                            <i class="fa-sharp fa-solid fa-arrows-left-right" style="color: #000000;"></i>
+                            Пшемисль
+                        </button>
+                    </li>
+                    <li class="popular__list-item">
+                        <button id="popular3">
+                            Київ
+                            <i class="fa-sharp fa-solid fa-arrows-left-right" style="color: #000000;"></i>
+                            Дніпро-Головний
+                        </button>
+                    </li>
+                    <li class="popular__list-item">
+                        <button id="popular4">
+                            Київ
+                            <i class="fa-sharp fa-solid fa-arrows-left-right" style="color: #000000;"></i>
+                            Харків
+                        </button>
+                    </li>
+                    <li class="popular__list-item">
+                        <button id="popular5">
+                            Львів
+                            <i class="fa-sharp fa-solid fa-arrows-left-right" style="color: #000000;"></i>
+                            Пшемисль
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="container">
+                <form action="#" class="main__form" method="post" name="formPlaces">
+                    <div class="form__content">
+                        <div class="content__upside">
+                            <div class="upside__column-first">
+                                <p class="upside__text text">Звідки</p>
+                                <input type="text" class="upside__input" name="from">
+                                <ul class="upside__hint-list hint-list">
+                                    <li class="hint-list__item"><button class="hint-list__button" id="hint-city1"
+                                            type="button">Київ</button></li>
+                                    <li class="hint-list__item"><button class="hint-list__button" id="hint-city2"
+                                            type="button">Львів</button></li>
+                                    <li class="hint-list__item"><button class="hint-list__button" id="hint-city3"
+                                            type="button">Пшемисль</button></li>
+                                    <li class="hint-list__item"><button class="hint-list__button" id="hint-city4"
+                                            type="button">Дніпро-Головний</button></li>
+                                    <li class="hint-list__item"><button class="hint-list__button" id="hint-city5"
+                                            type="button">Одеса</button></li>
+                                </ul>
+                            </div>
+                            <div class="upside__column-second">
+                                <button class="upside__button" id="button-swap" type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#68B2DD"
+                                        width="30">
+                                        <path
+                                            d="M406.6 374.6l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224l-293.5 0 41.4-41.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288l293.5 0-41.4 41.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="upside__column-third">
+                                <p class="upside__text text">Куди</p>
+                                <input type="text" class="upside__input" name="to">
+                                <ul class="upside__hint-list hint-list">
+                                    <li class="hint-list__item"><button class="hint-list__button" id="hint-city6"
+                                            type="button">Київ</button></li>
+                                    <li class="hint-list__item"><button class="hint-list__button" id="hint-city7"
+                                            type="button">Львів</button></li>
+                                    <li class="hint-list__item"><button class="hint-list__button" id="hint-city8"
+                                            type="button">Пшемисль</button></li>
+                                    <li class="hint-list__item"><button class="hint-list__button" id="hint-city9"
+                                            type="button">Дніпро-Головний</button></li>
+                                    <li class="hint-list__item"><button class="hint-list__button" id="hint-city10"
+                                            type="button">Одеса</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="content__downside">
+                            <div class="downside__date">
+                                <p class="downside__text text">Дата відправлення</p>
+                                <input type="date" class="downside__input" name="date">
+                                <ul class="downside__hint-list hint-list">
+                                    <li class="hint-list__item"><button class="hint-list__button" id="hint-day1"
+                                            type="button">Сьогодні</button></li>
+                                    <li class="hint-list__item"><button class="hint-list__button" id="hint-day2"
+                                            type="button">Завтра</button></li>
+                                    <li class="hint-list__item"><button class="hint-list__button" id="hint-day3"
+                                            type="button">Післязавтра</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="submit">
+            <button class="submit__button" id="submit" type="submit"></button>
+            <h3 class="submit__alert"></h3>
+        </div>
+
+        <div class="table-container">
+            <table class="table kyiv-lviv">
+                <tr>
+                    <th>№ поїзда</th>
+                    <th>Звідки / Куди</th>
+                    <th>Дата</th>
+                    <th>
+                        <span class="span-block">Відправлення</span>
+                        <span class="span-block">Прибуття</span>
+                    </th>
+                    <th>Тривалість</th>
+                    <th>Вільних місць</th>
+                </tr>
+                <tr>
+                    <td rowspan="2" class="table__number">
+                        <span>715 К</span>
+                    </td>
+                    <td rowspan="2" class="table__location">
+                        <span>Київ-Пасажирський</span>
+                        <span>Пшемисль</span>
+                    </td>
+                    <td rowspan="2" class="table__date">
+                        <div>
+                            <span>Відправлення</span>
+                            <span class="table__dep-date">
+                                <!-- вставити дату через js -->
+                            </span>
+                        </div>
+                        <div>
+                            <span>Прибуття</span>
+                            <span class="table__arr-date">
+                                <!-- вставити дату через js -->
+                            </span>
+                        </div>
+                    </td>
+                    <td rowspan="2" class="table__time">
+                        <span>11:01</span>
+                        <span>19:03</span>
+                    </td>
+                    <td rowspan="2" class="table__duration">
+                        <span>8:02</span>
+                    </td>
+                    <td class="table__free">
+                        <span class="free__type">C1</span>
+                        <span class="free__seats">10</span>
+                        <button class="free__button">Вибрати</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table__free">
+                        <span class="free__type">C2</span>
+                        <span class="free__seats">58</span>
+                        <button class="free__button">Вибрати</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table__number">
+                        <span>055 О</span>
+                    </td>
+                    <td class="table__location">
+                        <span>Київ-Пасажирський</span>
+                        <span>Рахів</span>
+                    </td>
+                    <td class="table__date">
+                        <div>
+                            <span>Відправлення</span>
+                            <span class="table__dep-date">
+                                <!-- вставити дату через js -->
+                            </span>
+                        </div>
+                        <div>
+                            <span>Прибуття</span>
+                            <span class="table__arr-date">
+                                <!-- вставити дату через js -->
+                            </span>
+                        </div>
+                    </td>
+                    <td class="table__time">
+                        <span>14:26</span>
+                        <span>23:50</span>
+                    </td>
+                    <td class="table__duration">
+                        <span>9:24</span>
+                    </td>
+                    <td class="table__free">
+                        <span class="free__type">C2</span>
+                        <span class="free__seats">58</span>
+                        <button class="free__button">Вибрати</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2" class="table__number">
+                        <span>055 К</span>
+                    </td>
+                    <td rowspan="2" class="table__location">
+                        <span>Київ-Пасажирський</span>
+                        <span>Рахів</span>
+                    </td>
+                    <td rowspan="2" class="table__date">
+                        <div>
+                            <span>Відправлення</span>
+                            <span class="table__dep-date">
+                                <!-- вставити дату через js -->
+                            </span>
+                        </div>
+                        <div>
+                            <span>Прибуття</span>
+                            <span class="table__arr-date">
+                                <!-- вставити дату через js -->
+                            </span>
+                        </div>
+                    </td>
+                    <td rowspan="2" class="table__time">
+                        <span>14:26</span>
+                        <span>23:50</span>
+                    </td>
+                    <td rowspan="2" class="table__duration">
+                        <span>9:24</span>
+                    </td>
+                    <td class="table__free">
+                        <span class="free__type">К</span>
+                        <span class="free__seats">3</span>
+                        <button class="free__button">Вибрати</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table__free">
+                        <span class="free__type">П</span>
+                        <span class="free__seats">6</span>
+                        <button class="free__button">Вибрати</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2" class="table__number">
+                        <span>705 К</span>
+                    </td>
+                    <td rowspan="2" class="table__location">
+                        <span>Київ-Пасажирський</span>
+                        <span>Пшемисль</span>
+                    </td>
+                    <td rowspan="2" class="table__date">
+                        <div>
+                            <span>Відправлення</span>
+                            <span class="table__dep-date">
+                                <!-- вставити дату через js -->
+                            </span>
+                        </div>
+                        <div>
+                            <span>Прибуття</span>
+                            <span class="table__arr-date">
+                                <!-- вставити дату через js -->
+                            </span>
+                        </div>
+                    </td>
+                    <td rowspan="2" class="table__time">
+                        <span>20:10</span>
+                        <span>03:45</span>
+                    </td>
+                    <td rowspan="2" class="table__duration">
+                        <span>7:35</span>
+                    </td>
+                    <td class="table__free">
+                        <span class="free__type">C1</span>
+                        <span class="free__seats">12</span>
+                        <button class="free__button">Вибрати</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table__free">
+                        <span class="free__type">C2</span>
+                        <span class="free__seats">13</span>
+                        <button class="free__button">Вибрати</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table__number">
+                        <span>049 О</span>
+                    </td>
+                    <td class="table__location">
+                        <span>Київ-Пасажирський</span>
+                        <span>Трускавець</span>
+                    </td>
+                    <td class="table__date">
+                        <div>
+                            <span>Відправлення</span>
+                            <span class="table__dep-date">
+                                <!-- вставити дату через js -->
+                            </span>
+                        </div>
+                        <div>
+                            <span>Прибуття</span>
+                            <span class="table__arr-date">
+                                <!-- вставити дату через js -->
+                            </span>
+                        </div>
+                    </td>
+                    <td class="table__time">
+                        <span>21:42</span>
+                        <span>04:37</span>
+                    </td>
+                    <td class="table__duration">
+                        <span>6:55</span>
+                    </td>
+                    <td class="table__free">
+                        <span class="free__type">C2</span>
+                        <span class="free__seats">88</span>
+                        <button class="free__button">Вибрати</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2" class="table__number">
+                        <span>091 К</span>
+                    </td>
+                    <td rowspan="2" class="table__location">
+                        <span>Київ-Пасажирський</span>
+                        <span>Львів</span>
+                    </td>
+                    <td rowspan="2" class="table__date">
+                        <div>
+                            <span>Відправлення</span>
+                            <span class="table__dep-date">
+                                <!-- вставити дату через js -->
+                            </span>
+                        </div>
+                        <div>
+                            <span>Прибуття</span>
+                            <span class="table__arr-date">
+                                <!-- вставити дату через js -->
+                            </span>
+                        </div>
+                    </td>
+                    <td rowspan="2" class="table__time">
+                        <span>22:48</span>
+                        <span>06:18</span>
+                    </td>
+                    <td rowspan="2" class="table__duration">
+                        <span>7:30</span>
+                    </td>
+                    <td class="table__free">
+                        <span class="free__type">Л</span>
+                        <span class="free__seats">11</span>
+                        <button class="free__button">Вибрати</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table__free">
+                        <span class="free__type">К</span>
+                        <span class="free__seats">90</span>
+                        <button class="free__button">Вибрати</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="seats">
+            <form action="#" method="post" name="formSeats" class="seats__form">
+                <label>Вагон:</label><select class="seats__wagon"></select>
+                <label>Місце:</label><select class="seats__seat"></select>
+                <button class="seats__button">Оформити квиток</button>
+            </form>
+        </div>
+
+        <div class="buy">
+            <div class="buy__alert">
+                <h3 class="alert__head">Введіть дані пасажирів</h3>
+                <p class="alert__text">Обов'язково введіть прізвище та ім'я пасажира, який буде здійснювати поїздку</p>
+                <p class="alert__text">Зміна прізвища та імені після здійснення оплати проїзних документів НЕМОЖЛИВА</p>
+            </div>
+
+            <div class="buy__passenger">Пасажир 1 </div>
+            
+            <form action="#" method="post" name="formBuy" class="buy__form">
+                <div class="buy-form__top">
+                    <div class="form__name">
+                        <div class="name__title">Прізвище</div>
+                        <input type="text" class="name__input">
+                    </div>
+                    <div class="form__name">
+                        <div class="name__title">Ім'я</div>
+                        <input type="text" class="name__input">
+                    </div>
+                    <div class="form__cancel">Відмінити</div>
+                </div>
+                <div class="buy-form__bottom">
+                    <h4 class="form__train-info">
+                        <span class="train-info__train">Поїзд</span>
+                        <span class="train-info__wagon">Вагон</span>
+                        <span class="train-info__seat">Місце</span>
+                    </h4>
+                    <div class="buy-form__services">
+                        <div class="services__ticket">
+                            <h5 class="services__head">Тип документу</h5>
+                            <div><input type="radio" name="ticket" id="ticketFull" checked><label for="ticketFull">Повний</label></div>
+                            <div><input type="radio" name="ticket" id="ticketKid"><label for="ticketKid">Дитячий</label></div>
+                            <div><input type="radio" name="ticket" id="ticketзPrivel"><label for="ticketзPrivel">Пільговий</label></div>
+                        </div>
+                        <div class="services__drink">
+                            <h5 class="services__head">Послуги</h5>
+                            <div><input type="checkbox" id="battleTea"><label for="battleTea">Бойовий чай</label></div>
+                            <div><input type="checkbox" id="OneDrink"><label for="OneDrink">1 напій</label></div>
+                            <div><input type="checkbox" id="AuthorTea"><label for="AuthorTea">Авторський чай</label></div>
+                            <div><input type="checkbox" id="DripCoffee"><label for="DripCoffee">Дріп-кава</label></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="buy__end">
+                <div class="end__cost">
+                    <span>Загальна вартість: </span>
+                    <span class="js-cost-span"></span>
+                </div>
+                <button class="end__button">Купити</button>
+                <h2 class="end__message"></h2>
+            </div>
+        </div>
+
+        <button class="shopping-cart">
+            Кошик
+        </button>
+    </div>
+
+
+
+
+
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>
